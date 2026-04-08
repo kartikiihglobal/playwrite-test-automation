@@ -1,7 +1,7 @@
 import { test, expect } from '@playwright/test';
 
 test('test', async ({ page }) => {
-  await page.goto('https://devstage.pharmsmart.co.uk/');
+  await page.goto('https://devstage.pharmsmart.co.uk11/');
   await page.getByRole('link', { name: 'SIGN IN' }).click();
   await page.getByRole('textbox', { name: 'Enter the branch email address' }).fill('pharmacistore@yopmail.com');
   await page.getByRole('textbox', { name: 'Password' }).fill('password@1');
