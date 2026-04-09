@@ -8,6 +8,10 @@ class loginpage extends Basepage{
          this.email = '#email';
          this.password = '#password'
          this.submitbtn = ':text-is("Sign in")'
+         this.logoutbutton= 'span:has-text("Sign out")'
+        
+         //other type 
+       //this.email = page.getByRole('textbox', { name: 'Email' });
     }
 
     async openurl(url){
@@ -17,6 +21,8 @@ class loginpage extends Basepage{
        await this.fill(this.email, email)
        await  this.fill(this.password, password)
        await this.click(this.submitbtn)
+       await this.gettext(this.logoutbutton)
+      
     }
 }
 
