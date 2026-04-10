@@ -7,6 +7,7 @@ test("logintest", async({page})=>{
   await lp_page.goto("/login")
   await lp_page.login("newdesign@yopmail.com", "Password@123")
   await expect(lp_page.logutbtn).toBeVisible()
+ // await expect.soft(lp_page.logutbtn).toBeVisible()
   const btn= await lp_page.logutbtn.innerText()
   console.log(btn)
   await page.waitForTimeout(3000)
